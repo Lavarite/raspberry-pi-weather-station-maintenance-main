@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Passion+One&family=Ubuntu:wght@300&display=swap');
+.about-us {
+    background-color: var(--about-bg-colour);
+    border: 1px solid var(--about-bg-colour);
+    /* same trick as before, zero clue why it works lol  */
+    font-family: 'Ubuntu', sans-serif;
+    height: 95vh;
+}
+
+
+/* @media (max-width: 750px) {
+    .about-us {
+        height: auto;
+    }
+} */
+
+.about-wrapper {
+    margin-left: var(--margin-left);
+    margin-right: var(--margin-right);
+    border: 1px solid var(--about-bg-colour);
+}
+
+
+/* banner */
+
+#about-banner {
+    margin-top: var(--banner-top-gap);
+    margin-bottom: var(--banner-bottom-gap);
+    height: var(--banner-height);
+    font-family: 'Passion One', cursive;
+}
+
+
+/* main section */
+
+.about-us-contents {
+    display: grid;
+    grid-gap: 0.4em;
+    grid-template-areas: "img1 text1 text1" "quotes quotes img2";
+    font-size: var(--text-fs);
+
+    width: 100%;
+}
+
+@media (max-width: 1170px) {
+    .about-us-contents {
+        font-size: 1.3em;
+    }
+}
+
+@media (max-width: 940px) {
+    .about-us-contents {
+        font-size: 1em;
+    }
+}
+
+.about-us-text1 {
+    grid-area: text1;
+    font-size: 0.75em;
+    margin: auto;
+}
+
+.about-us-quotes {
+    grid-area: quotes;
+    font-size: 0.65em;
+}
+
+.img-div {
+    grid-area: img1;
+    font-size: 1em;
+    position: relative;
+    margin-bottom: 1em;
+    margin-top: 1em;
+}
+
+.img-credit {
+    position: absolute;
+    left: 1em;
+    font-size: 0.5em;
+    bottom: 0vh;
+    color: rgba(255, 255, 255, 0.8);
+}
+
+#selfie-img {
+    max-width: 90%;
+    max-height: 30vh;
+    margin: auto;
+}
+
+#pi-img {
+    grid-area: img2;
+    max-width: 100%;
+    max-height: 200px;
+    /* border: 1px solid green; */
+    margin: auto;
+}
+
+@media (max-width: 718px) {
+    #selfie-img {
+        height: 200px;
+    }
+    #pi-img {
+        height: 300px;
+    }
+}
